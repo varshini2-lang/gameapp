@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Link Between HTML Files</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gaming Platform</h1>
+      <p>Welcome to our gaming platform! Click on the links below to play.</p>
+      <ul>
+        <li>
+          <div class="game">
+            <img
+              src="{{ url_for('static', filename='images/connect_four.png') }}"
+              alt="Connect Four"
+            />
+            <a href="{{ url_for('connect_four') }}">Connect Four Game</a>
+          </div>
+        </li>
+        <li>
+          <div class="game">
+            <img
+              src="{{ url_for('static', filename='images/wordle.jpg') }}"
+              alt="Wordle"
+            />
+            <a href="{{ url_for('wordle') }}">Wordle Game</a>
+          </div>
+        </li>
+        <li>
+          <div class="game">
+            <img
+              src="{{ url_for('static', filename='images/flappy.jpg') }}"
+              alt="Flappybird"
+            />
+            <a href="{{ url_for('flappybird') }}">Flappybird Game</a>
+          </div>
+        </li>
+        <li>
+          <div class="game">
+            <img
+              src="{{ url_for('static', filename='images/space.jpg') }}"
+              alt="space"
+            />
+            <a href="{{ url_for('space') }}">Space Invaders</a>
+          </div>
+        </li>
+        <li>
+          <div class="game">
+            <img
+              src="{{ url_for('static', filename='images/2048.png') }}"
+              alt="2048"
+            />
+            <a href="{{ url_for('game_2048') }}">2048 Game</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
