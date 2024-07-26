@@ -24,7 +24,11 @@ def space():
 
 @app.route('/2048')
 def game_2048():
-    return render_template('2048.html')
+    return render_template('index.html')
+
+@app.route('/doodle')
+def game_doodle():
+    return render_template('doodle.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
